@@ -163,11 +163,17 @@ The CloudFront URL might look ugly now (like `d1234567890123.cloudfront.net`), b
 
 **Copy the Amplify domain** (like https://main.ddrcpyox7wwsr.amplifyapp.com/)
 
-<!-- ![Test Amplify](./assets/amplify-test.png) -->
+![Test Amplify](./assets/Amplify-Output.png)
 
 ---
 
-## 🎉 Congratulations!
+### 🔄⚡ Test Automatic Deployments
 
-You’ve completed the Rift Rewind Developer Challenge!  
-Feel free to share your project, and keep experimenting with AWS & GitHub! 🚀
+> Edit **index.html** — Add pencil icon (✏️) to indicate edit
+
+
+
+
+
+
+
