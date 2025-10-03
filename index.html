@@ -5,29 +5,111 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Ahmed Mohamed Abd Elhamid — Cloud & DevOps Engineer</title>
   <meta name="description" content="Ahmed Abd Elhamid — Cloud & DevOps Engineer. AWS, Docker, Kubernetes, Terraform, Ansible.">
+  <meta name="keywords" content="Cloud Engineer, DevOps, AWS, Docker, Kubernetes, Terraform, Ansible, Jenkins, Linux">
+  
+  <!-- Open Graph for LinkedIn/GitHub sharing -->
+  <meta property="og:title" content="Ahmed Mohamed Abd Elhamid — Cloud & DevOps Engineer">
+  <meta property="og:description" content="Cloud & DevOps Engineer skilled in AWS, Docker, Kubernetes, Terraform, and Ansible.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://yourdomain.com/avatar.png">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root{--accent:#0b74de;--muted:#6b7280;--card:#ffffff;--bg:#f6f8fb}
+    :root {
+      --accent:#0b74de;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f6f8fb;
+      --dark-bg:#0f172a;
+      --dark-card:#1e293b;
+      --dark-text:#e2e8f0;
+    }
+
     *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;background:var(--bg);color:#0f172a;margin:0}
+    body{
+      font-family:'Inter',system-ui,Arial,Helvetica,sans-serif;
+      background:var(--bg);
+      color:#0f172a;
+      margin:0;
+      transition:background 0.3s,color 0.3s;
+    }
+    body.dark{
+      background:var(--dark-bg);
+      color:var(--dark-text);
+    }
+
     .container{max-width:1000px;margin:32px auto;padding:24px}
     header{display:flex;gap:20px;align-items:center}
-    .avatar{width:110px;height:110px;border-radius:12px;background:linear-gradient(135deg,#e6f0ff,#fff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:28px}
-    h1{margin:0;font-size:22px}
+    .avatar{
+      width:110px;height:110px;border-radius:12px;
+      background:linear-gradient(135deg,#e6f0ff,#fff);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;color:var(--accent);font-size:28px;
+    }
+    h1{margin:0;font-size:24px}
     .sub{color:var(--muted);margin-top:6px}
     .row{display:flex;gap:18px;flex-wrap:wrap}
-    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(16,24,40,0.06);flex:1;min-width:260px}
+    .card{
+      background:var(--card);border-radius:12px;
+      padding:18px;box-shadow:0 6px 18px rgba(16,24,40,0.06);
+      flex:1;min-width:260px;
+      transition:all 0.3s ease;
+    }
+    body.dark .card{background:var(--dark-card)}
+    .card:hover{transform:translateY(-4px);box-shadow:0 8px 22px rgba(0,0,0,0.12)}
     nav .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
-    a.btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600}
+    a.btn{
+      background:var(--accent);color:#fff;padding:8px 12px;
+      border-radius:8px;text-decoration:none;font-weight:600;
+      transition:all 0.25s ease;
+    }
+    a.btn:hover{transform:translateY(-2px) scale(1.02);opacity:0.9}
     .section-title{display:flex;justify-content:space-between;align-items:center}
-    h2{margin:0;font-size:16px}
+    h2{margin:0;font-size:18px}
     ul{padding-left:18px;margin:8px 0}
     .skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-    .chip{background:#eef6ff;padding:6px 8px;border-radius:999px;font-size:13px;color:var(--accent)}
+    .chip{
+      background:#eef6ff;padding:6px 8px;border-radius:999px;
+      font-size:13px;color:var(--accent)
+    }
     footer{margin-top:22px;text-align:center;color:var(--muted);font-size:14px}
     .grid-2{display:grid;grid-template-columns:1fr 320px;gap:18px}
-    .contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef6;margin-top:6px}
-    .contact-submit-btn{margin-top:8px;background:var(--accent);color:#fff;border:0;padding:10px 14px;border-radius:8px;font-weight:600}
-    @media(max-width:880px){.grid-2{grid-template-columns:1fr}header{flex-direction:column;align-items:flex-start}.avatar{width:88px;height:88px}}
+    .contact-form input,.contact-form textarea{
+      width:100%;padding:10px;border-radius:8px;
+      border:1px solid #e6eef6;margin-top:6px
+    }
+    .contact-submit-btn{
+      margin-top:8px;background:var(--accent);color:#fff;border:0;
+      padding:10px 14px;border-radius:8px;font-weight:600;
+      transition:all 0.3s ease;
+    }
+    .contact-submit-btn:hover{background:#095bb5;transform:translateY(-1px)}
+    @media(max-width:880px){
+      .grid-2{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start}
+      .avatar{width:88px;height:88px}
+    }
+
+    /* League Lookup styles (unchanged but themed) */
+    .league-lookup {
+      background: white;
+      border-radius: 8px;
+      padding: 40px;
+      margin-top: 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition:background 0.3s;
+    }
+    body.dark .league-lookup{background:var(--dark-card)}
+    .league-lookup h3 {font-size: 28px;text-align:center;margin-bottom:16px}
+    .lookup-submit-btn {
+      background:#c89b3c;color:white;padding:12px 32px;
+      border:none;border-radius:6px;font-weight:500;font-size:16px;
+      cursor:pointer;transition:all 0.2s ease;
+      display:block;margin:0 auto;
+    }
+    .lookup-submit-btn:hover{background:#b8862e;transform:translateY(-1px)}
   </style>
 </head>
 <body>
@@ -41,6 +123,7 @@
           <a href="https://www.linkedin.com/in/ahmedabdelhamid1399" target="_blank" class="btn">LinkedIn</a>
           <a href="https://github.com/Ahmed-1399" target="_blank" class="btn" style="background:#111">GitHub</a>
           <a href="https://drive.google.com/file/d/1Yb-FzJqu26CDJ9AfvF_mitbVLBBex21E/view?usp=sharing" target="_blank" class="btn" style="background:#0a2540">Download PDF</a>
+          <button id="dark-toggle" class="btn" style="background:#444">🌙 Dark Mode</button>
         </div>
       </div>
     </header>
@@ -66,7 +149,6 @@
               <li>Implemented CI/CD with Jenkins for Kubernetes deployments and ALB with auto-scaling.</li>
               <li>Configured CloudFront and S3 static hosting to reduce load times and costs.</li>
             </ul>
-
             <h3 style="margin-top:10px">Selected Projects</h3>
             <ul>
               <li>Automated Node.js App Deployment on AWS EKS using Jenkins.</li>
@@ -89,7 +171,6 @@
             <div class="section-title"><h2>Education</h2></div>
             <p><strong>Bachelor's Degree in Computers and Information</strong> — Menofia University (Sep 2018 – Jul 2022). Graduation Project: Tourism in Egypt (Grade: Excellent)</p>
           </section>
-
         </div>
 
         <!-- Right column -->
@@ -106,13 +187,11 @@
               <span class="chip">Git / GitHub</span>
               <span class="chip">Linux (Red Hat)</span>
             </div>
-
             <h3 style="margin-top:12px">Soft Skills</h3>
             <ul>
               <li>Continuous Learning • Dependability • Adaptability</li>
               <li>Time Management • Communication • Team Collaboration</li>
             </ul>
-
             <h3 style="margin-top:12px">Languages</h3>
             <p>Arabic (Native) • English (Good command)</p>
           </section>
@@ -138,7 +217,7 @@
         </aside>
       </div>
 
-      <!-- Contact area (expanded) -->
+      <!-- Contact area -->
       <section class="card contact-form" style="margin-top:12px">
         <div class="section-title"><h2>Contact</h2></div>
         <p>Have a question or want to collaborate? Send a quick message.</p>
@@ -146,18 +225,37 @@
         <form class="contact-form-container">
           <label for="name">Name</label>
           <input id="name" name="name" required>
-
           <label for="email" style="margin-top:8px">Email</label>
           <input type="email" id="email" name="email" required>
-
           <label for="message" style="margin-top:8px">Message</label>
           <textarea id="message" name="message" rows="5" required></textarea>
-
           <button type="submit" class="contact-submit-btn">Send Message</button>
         </form>
-        <p style="margin-top:8px;color:var(--muted);font-size:13px">(The contact form is configured to post to a serverless endpoint. Replace <code>LAMBDA_URL</code> in the script.)</p>
       </section>
 
+      <!-- League Data Lookup -->
+      <section class="league-lookup">
+        <h3>League Data Lookup</h3>
+        <p>Enter a Riot ID to see their level and top champions!</p>
+        <div id="lookup-message" class="lookup-message" style="display:none;"></div>
+        <div class="lookup-form-container">
+          <div class="form-group">
+            <label for="summoner-name">Riot ID</label>
+            <input type="text" id="summoner-name" name="summoner-name" placeholder="GameName#TAG (e.g., Hide on bush#KR1)" required>
+          </div>
+          <div class="form-group">
+            <label for="region">Region</label>
+            <select id="region" name="region">
+              <option value="na1">North America</option>
+              <option value="euw1">Europe West</option>
+              <option value="eun1">Europe Nordic & East</option>
+              <option value="kr">Korea</option>
+            </select>
+          </div>
+          <button type="button" id="lookup-btn" class="lookup-submit-btn">Look Up Summoner</button>
+        </div>
+        <div id="summoner-results" class="summoner-results" style="display:none;"></div>
+      </section>
     </main>
 
     <footer>
@@ -166,57 +264,56 @@
   </div>
 
   <script>
-    // Embedded contact form logic (adapted from uploaded script.js)
-    const LAMBDA_URL = 'https://hicfdm3fmo5hrx4asolm2iyq5y0weqzk.lambda-url.us-east-1.on.aws/'; // <-- replace with your Function URL
+    const LAMBDA_URL = 'https://hicfdm3fmo5hrx4asolm2iyq5y0weqzk.lambda-url.us-east-1.on.aws/';
 
     document.addEventListener('DOMContentLoaded', function() {
-        const form = document.querySelector('.contact-form-container');
+      const form = document.querySelector('.contact-form-container');
+      const toggle = document.getElementById('dark-toggle');
 
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
+      toggle.addEventListener('click', ()=>document.body.classList.toggle('dark'));
 
-            const submitBtn = form.querySelector('.contact-submit-btn');
-            const messageDiv = document.getElementById('form-message');
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const submitBtn = form.querySelector('.contact-submit-btn');
+        const messageDiv = document.getElementById('form-message');
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        messageDiv.style.display = 'none';
 
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            messageDiv.style.display = 'none';
-
-            const formData = {
-                name: form.name.value,
-                email: form.email.value,
-                message: form.message.value
-            };
-
-            try {
-                const response = await fetch(LAMBDA_URL, {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify(formData)
-                });
-
-                if (response.ok) {
-                    showMessage('Message sent successfully! Thank you for reaching out.', 'success');
-                    form.reset();
-                } else {
-                    showMessage('Failed to send message. Please try again.', 'error');
-                }
-            } catch (error) {
-                showMessage('Network error. Please check your connection and try again.', 'error');
-            }
-
-            submitBtn.textContent = 'Send Message';
-            submitBtn.disabled = false;
-        });
+        const formData = {
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value
+        };
+        try {
+          const response = await fetch(LAMBDA_URL, {
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify(formData)
+          });
+          if(response.ok){
+            showMessage('✅ Message sent successfully!','success');
+            form.reset();
+          }else{
+            showMessage('❌ Failed to send message.','error');
+          }
+        } catch (error) {
+          showMessage('⚠️ Network error. Try again.','error');
+        }
+        submitBtn.textContent = 'Send Message';
+        submitBtn.disabled = false;
+      });
     });
 
-    function showMessage(text, type) {
-        const messageDiv = document.getElementById('form-message');
-        messageDiv.textContent = text;
-        messageDiv.style.display = 'block';
-        messageDiv.style.background = type === 'success' ? '#ecfdf5' : '#fff1f2';
-        messageDiv.style.color = type === 'success' ? '#065f46' : '#9b1c1c';
-        setTimeout(() => { messageDiv.style.display = 'none'; }, 10000);
+    function showMessage(text,type){
+      const div=document.getElementById('form-message');
+      div.textContent=text;
+      div.style.display='block';
+      div.style.background=type==='success'?'#ecfdf5':'#fff1f2';
+      div.style.color=type==='success'?'#065f46':'#9b1c1c';
+      div.style.fontWeight='600';
+      div.style.transition='all 0.3s ease';
+      setTimeout(()=>{div.style.display='none'},7000);
     }
   </script>
 </body>
