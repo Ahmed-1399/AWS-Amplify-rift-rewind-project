@@ -123,6 +123,12 @@ Users can get content through the CDN, but they can't access your storage direct
 
 ## 🚀 Deploy Using (GitHub, Amplify)
 
+- Created GitHub account and repository
+- Uploaded project files to GitHub
+- Deployed project using Amplify + GitHub integration
+- Tested automatic deployment by making a code change
+- Cleaned up original CloudFront distribution
+
 The CloudFront URL might look ugly now (like `d1234567890123.cloudfront.net`), but later you can connect it to a **custom domain name** to make it look professional. 🌐
 
 ### 🏆 What You Will Accomplish
@@ -171,8 +177,48 @@ The CloudFront URL might look ugly now (like `d1234567890123.cloudfront.net`), b
 
 > Edit **index.html** — Add pencil icon (✏️) to indicate edit
 
+![Deploy](./assets/Deploy.png)
 
+#### 🚀 Output
 
+![Test Automatic Deploy](./assets/Amplify-Text-Deploy-Auto.png)
+
+You now have a professional development setup that automatically deploys your changes and showcases your work. Here's what you've accomplished
+-  Professional code storage on GitHub with full version history
+- Automated deployment pipeline that updates your live project instantly
+- Global CDN performance without manual configuration
+- Portfolio-ready project that demonstrates modern development practices
+
+<br>
+<br>
+
+## Building Your First Riot Games API Integration
+
+### 🔑 Get Your Riot Developer API Key
+
+Register for [Riot Developer Portal](https://developer.riotgames.com/)
+
+- **Sign in with your Riot Account** - Use your existing Riot Games account (or create one)
+- **Accept Developer Terms** - Read and accept the Riot Games API Terms of Service
+- **Get your API key:**
+  - Navigate to your **dashboard**
+  - You'll see "**Development API Key**" with a "**REGENERATE API KEY**" button
+  - **Copy this key** and save it securely (it expires every 24 hours for personal keys)
+
+### Configure Secure API Key Storage
+
+- Navigate to **Systems Manager** - In the AWS Console
+- In the **left sidebar**, click "**Parameter Store**"
+- Click "**Create parameter**"
+- **Description**: "Riot Games API key for League data integration"
+- **Tier:** Standard
+- **Type:** SecureString (this encrypts your API key)
+- **Value:** Paste your **Riot API key** here
+- **Create parameter**
+
+<!-- imag -->
+
+##### Create Permissions Policy
 
 
 
